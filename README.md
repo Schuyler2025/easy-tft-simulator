@@ -1,5 +1,7 @@
 # TFT DPS 模拟器
 
+![TFT DPS 模拟器界面截图](tauri-window.png)
+
 一个用于《英雄联盟：云顶之弈》（TFT）的单英雄 DPS 模拟器桌面应用。选择英雄、星级、装备方案、羁绊断点与目标假人后，计算有效 DPS，并用时间曲线展示输出节奏。
 
 当前版本聚焦 **Set 17 单英雄打桩模拟**：普攻、on-hit、技能循环、目标护甲/魔抗、起始蓝/回蓝、A/B 装备方案对比。
@@ -15,14 +17,6 @@
 - **详细拆分**：显示有效属性、普攻 DPS、on-hit DPS、技能 DPS、总 DPS。
 - **技能详情**：展示技能单次伤害、施法频率、是否使用 curated castSpec。
 - **桌面应用图标**：自定义 TFT 风格图标，不使用默认纯色矩形。
-
-## 截图
-
-项目根目录中保留了当前窗口截图：
-
-```text
-tauri-window.png
-```
 
 ## 技术栈
 
@@ -193,4 +187,4 @@ npm test
 
 ## License
 
-Private / prototype project.
+MIT
