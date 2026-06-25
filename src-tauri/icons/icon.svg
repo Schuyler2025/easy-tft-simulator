@@ -1,0 +1,62 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bg" cx="34%" cy="25%" r="78%">
+      <stop offset="0" stop-color="#31224c"/>
+      <stop offset="0.45" stop-color="#151126"/>
+      <stop offset="1" stop-color="#07060d"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="230" y1="106" x2="794" y2="918" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f6d37a"/>
+      <stop offset="0.48" stop-color="#c89b3c"/>
+      <stop offset="1" stop-color="#7b5218"/>
+    </linearGradient>
+    <linearGradient id="cyan" x1="295" y1="669" x2="745" y2="301" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#48f2ff"/>
+      <stop offset="0.55" stop-color="#3ea6ff"/>
+      <stop offset="1" stop-color="#9b5cff"/>
+    </linearGradient>
+    <linearGradient id="red" x1="657" y1="292" x2="811" y2="450" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff8a70"/>
+      <stop offset="1" stop-color="#e6534a"/>
+    </linearGradient>
+    <filter id="shadow" x="96" y="80" width="832" height="880" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="28" stdDeviation="34" flood-color="#000000" flood-opacity="0.48"/>
+    </filter>
+    <filter id="glowCyan" x="210" y="245" width="604" height="510" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.18 0 0 0 0 0.72 0 0 0 0 1 0 0 0 0.55 0"/>
+      <feBlend in="SourceGraphic" mode="screen"/>
+    </filter>
+  </defs>
+
+  <!-- Rounded app tile. -->
+  <rect x="64" y="64" width="896" height="896" rx="218" fill="url(#bg)"/>
+
+  <!-- Subtle board grid: auto-chess hex/chess vernacular, kept quiet at small sizes. -->
+  <g opacity="0.16" stroke="#6e688a" stroke-width="6">
+    <path d="M192 512H832"/>
+    <path d="M512 192V832"/>
+    <path d="M260 318L764 706"/>
+    <path d="M764 318L260 706"/>
+  </g>
+
+  <!-- Main TFT-ish hex badge. -->
+  <g filter="url(#shadow)">
+    <path d="M512 122L824 302V722L512 902L200 722V302L512 122Z" fill="#11101d" stroke="url(#gold)" stroke-width="38" stroke-linejoin="round"/>
+    <path d="M512 184L768 332V692L512 840L256 692V332L512 184Z" fill="#171229" stroke="#3a2a55" stroke-width="12" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Damage pulse / DPS curve, shaped like a blade crossing the board. -->
+  <g filter="url(#glowCyan)">
+    <path d="M278 612C341 612 350 448 406 448C464 448 471 690 528 690C586 690 595 337 666 337C710 337 725 451 746 512" stroke="url(#cyan)" stroke-width="58" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M278 612C341 612 350 448 406 448C464 448 471 690 528 690C586 690 595 337 666 337C710 337 725 451 746 512" stroke="#e8fbff" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" opacity="0.88"/>
+  </g>
+
+  <!-- Crit marker: one risky red accent, not a generic dot. -->
+  <path d="M736 238L812 328L766 434L656 424L610 322L736 238Z" fill="url(#red)" stroke="#ffd0c4" stroke-width="14" stroke-linejoin="round"/>
+  <path d="M708 308L748 350" stroke="#fff2ec" stroke-width="16" stroke-linecap="round"/>
+  <path d="M751 306L708 350" stroke="#fff2ec" stroke-width="16" stroke-linecap="round"/>
+
+  <!-- Small lower notch: resembles a target reticle / damage meter needle. -->
+  <path d="M512 738L560 812H464L512 738Z" fill="url(#gold)" opacity="0.92"/>
+</svg>

@@ -1,0 +1,7 @@
+# Override the global Git-based mirror — use crates.io sparse HTTP index
+# which is 10-100x faster for the initial fetch.
+[source.crates-io]
+replace-with = "tuna-sparse"
+
+[source.tuna-sparse]
+registry = "sparse+https://mirrors.tuna.tsinghua.edu.cn/crates.io-index/"
